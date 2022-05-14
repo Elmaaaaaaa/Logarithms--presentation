@@ -1,0 +1,292 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{dirtytalk}
+ \usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
+ 
+ \usepackage{wrapfig}
+\useoutertheme{miniframes} % Alternatively: miniframes, infolines, split
+%\useinnertheme{circles}
+\definecolor{oldmauve}{rgb}{0.4, 0.19, 0.28}
+\usecolortheme[named=oldmauve]{structure}
+%\usecolortheme[named=Mahogany]{structure} % Sample dvipsnames color
+\mode<presentation>{
+     
+     
+%\usetheme{default}
+ %\usetheme{AnnArbor}
+ %\usetheme{Antibes}
+ % \usetheme{Bergen}
+%\usetheme{Berkeley}
+ %\usetheme{Berlin}
+ %\usecolortheme{beaver}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+% \usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+ % \usetheme{Frankfurt}
+ %\usetheme{Goettingen}
+\usetheme{Hannover}
+% \usetheme{Ilmenau}
+\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+ %  \usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+ % \usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+\newcommand{\arctg}[1]{\text{arctg}(#1) }
+\newcommand{\tg}[1]{\text{tg}(#1)}
+}
+\usepackage[utf8]{inputenc}
+ \usepackage[demo]{graphicx}
+
+\usepackage{pgfplots}
+\pgfplotsset{/pgf/number format/use comma,compat=newest}
+\usepackage{color}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{graphicx}
+\newtheorem{deff}{Definicija}
+\newtheorem{thm}{\textrm{Teorem}}[section]
+\newtheorem{defn}{\textrm{Definicija}}[section]
+\newtheorem{pos}{\textrm{Posljedica}}[section]
+\newtheorem{lema}{\textrm{Lema}}[section]
+\newtheorem{pri}{\textrm{Primjer}}[section]
+\newtheorem{prim}{\textrm{Primjedba}}[section]
+\newenvironment{dokaz}{\noindent\textbf{\textrm{Dokaz:}}}{\rule{0.3cm}{0.3cm}}
+\newenvironment{rje}{\noindent\textit{Rje\v senje:}}{$\clubsuit$}
+\renewcommand{\dj}{d\kern-0.4em\char"16\kern-0.1em}
+\renewcommand{\DJ}{\raise0.3ex\hbox{-}\kern-0.36em D}
+\renewcommand{\figurename}{Slika}
+
+ 
+
+
+
+
+
+
+\title{\bf LOGARITHMS {\vspace{.1cm}}\\   }
+\author{ \bf 
+}
+\institute[] {\includegraphics[height=1.3in]{bbb.png} {{\vspace{.1cm}}\\ \bf  SCHOOL   {\vspace{.1cm}}\\ {\bf TUZLA 2020./21.}} } 
+   
+
+
+\begin{document}
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.6,inner sep=0] {\includegraphics[height=\paperheight,width=\paperwidth]{kk.jpg}};}
+\begin{frame}
+ \maketitle 
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Sumário}
+ %\tableofcontents
+%\end{frame}
+
+
+  
+\section{ TYPES OF LOGARITHM}
+
+\begin{frame}
+\frametitle{ TYPES OF LOGARITHM  } 
+\begin{block}{\textbf{The Fundamental Identity of Logarithms}}
+ 
+    $$ a^{\log_{a} N} = N.$$ 
+    
+ $N$ is always positive and $a$ is always positive and different from 1. So, negative numbers and zero do not have  logarithms.
+\end{block}
+\begin{block}{\textbf{Common Logarithms}}
+ 
+    Logarithms to the base $10$ are called \textbf{common logarithms}.\\
+    We will use \textbf{$\log x$} to mean $\log_{10} x$.
+    
+ 
+\end{block}
+\begin{block}{\textbf{Natural Logarithms}}
+ 
+    Logarithms to the base $e$ are called \textbf{natural logarithms} or \textbf{Euler logarithms}  .\\
+    We will use \textbf{$\ln x$} to mean $\log_{e} x$.
+    
+ 
+\end{block}
+\end{frame}
+\section{ PROPERTIES OF LOGARITHMS}
+
+\begin{frame}
+\frametitle{ PROPERTIES OF LOGARITHMS  } 
+\begin{alertblock}{\textbf{Property 1}}
+If the argument and the base of logarithm are equal, the logarithm is equal to 1. \\ Conversely, if the logarithm is 1, then the argument and the base are equal.
+
+$$a = b \Longleftrightarrow \log_{a}b = 1 \hspace{0.5 cm}(a>0, \hspace{0.2 cm}a\ne 1 ) $$
+   
+\end{alertblock}
+\begin{alertblock}{\textbf{Property 2}}
+The logarithm of $1$ to any base is zero!
+$$  \log_{a}1 = 0$$
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{PROPERTIES OF LOGARITHMS}
+\begin{alertblock}{\textbf{Property 3}}
+The logarithm of product of two  or more positive numbers to a given base is equal to the sum of the logarithms of the numbers to that base
+$$  \log_{a}(x\cdot y) =\log_{a}x + \log_{a}y \hspace{0.5 cm} (x,\hspace{0.1 cm}y >0)$$
+ 
+We can \textbf{generalize} this property as folllows:
+$$ \log_{a}(x_{1} \cdot x_{2} \cdot x_{3}\cdot ... \cdot x_{k}) =\log_{a}x_{1} + \log_{a}x_{2}+...+  \log_{a}x_{k}.$$
+\end{alertblock}
+
+\end{frame}
+\begin{frame}{PROPERTIES OF LOGARITHMS}
+    \begin{alertblock}{\textbf{Property 3}}
+The logarithm of a power of a positive number is equal to the product of the power and the logarithm of number
+$$  \log_{a}(x^{m}) =m\cdot \log_{a}x \hspace{0.5 cm} m\in \mathbf{R},\hspace{0.1 cm} x>0   $$
+ 
+\begin{center}
+    
+\textbf{Be careful!}
+\end{center}
+$$(\log_{a} x)^{m} \ne m\cdot \log_{a}x$$
+\end{alertblock}
+\end{frame}
+\begin{frame}{PROPERTIES OF LOGARITHMS}
+   \begin{alertblock}{\textbf{Property 4}}
+The logarithm of the quotient of two positive numbers is equal to the difference between the logarithms of the dividend and the divisor to the same base:
+$$  \log_{a}\left(\frac{x}{y}\right) = \log_{a}x - \log_{a}y   $$
+\begin{center}
+    
+\textbf{Be careful!}
+\end{center}
+$$\frac{\log_{a} x}{\log_{a}y} \ne   \log_{a}x - \log_{a}y $$
+ 
+ 
+ 
+\end{alertblock}
+\end{frame}
+\section{EXAMPLES}
+\begin{frame}{EXAMPLES}
+\begin{exampleblock}
+
+
+\begin{enumerate}
+    \item Calculate: $\log_{4} 2 + \log_{4} 8$
+    \item Calculate: $\log_{2} 3 + \log_{2} 5 +    \log_{2} \frac{1}{15}  $ 
+    \item Write each sum as a single logarithm:\begin{enumerate}
+        \item [(a)] $(2\cdot \log_{3} a ) + (3\cdot \log_{3} b ) -  \log_{3} c $
+        \item [(b)]  $(\frac{1}{2}\cdot \log_{2} a ) + (3\cdot \log_{2} b ) - \left( \frac{3}{2}\cdot\log_{3} c \right) $
+    \end{enumerate} 
+    \item Calculate: $\log_{2}  \sqrt[3]{2\cdot \sqrt{8 \cdot\sqrt[3]{16} }}$ 
+     \item Write each logarithm as a sum or difference of logarithms to base $a$ logarithm:\begin{enumerate}
+        \item [(a)] $  \log_{a} \frac{b^{3}c^{2}}{d^{4}e^{5}}$
+        \item [(b)]  $  \log_{a} \frac{\sqrt[5]{(b+c)^{2}}}{ (d-e)^{3}}$
+    \end{enumerate} 
+\end{enumerate}
+\end{exampleblock}
+    
+\end{frame}
+\section{ CHANGING THE BASE OF LOGARITHM}
+
+\begin{frame}
+\frametitle{ CHANGING THE BASE OF LOGARITHM }
+\begin{block}{\textbf{Property 6} }
+Raising the base of a logarithm to a non zero power is the same as dividing the logarithm by that power
+
+$$  \log_{a^{n}}x = \frac{1}{n} \cdot \log_{a}x   $$
+   
+ \end{block}
+ \begin{exampleblock}
+
+\begin{enumerate}
+    \item Write the following expression as a single logarithm to base 3.\\
+    $\log_{\frac{1}{3}}7 + 2 \log_{9}49  -\log_{\sqrt{3}}\frac{1}{7}$
+   
+\end{enumerate}
+   \end{exampleblock}
+\end{frame}
+\begin{frame}{CHANGING THE BASE OF LOGARITHM}
+    \begin{alertblock}{Note}
+    $$  \log_{a^{n}}x^{m} = \frac{m}{n} \cdot \log_{a}x   $$
+    $$  \log_{a }x  =    \log_{a^{n}}x^{n}  $$
+    \end{alertblock}
+     \begin{exampleblock}
+
+\begin{enumerate}
+    \item Evaluate the expressions.\\
+    $\log_{36}\frac{1}{6} +  \log_{\frac{1}{5}}\frac{1}{125}  +\log_{8}128 +  \log_{\frac{1}{3}}9 $
+   
+\end{enumerate}
+   \end{exampleblock}
+  
+\end{frame}
+\begin{frame}{CHANGING THE BASE OF LOGARITHM}
+   \begin{block}{\textbf{Property 7 - \textbf{The Change Base Formula}} }
+Let $a,$ $b$, and $x$ be positive numbers such that $a\ne 1$ and $b\ne 1$, then:
+
+
+$$  \log_{a}x = \frac{   \log_{b}x}{ \log_{b}a}   $$
+   
+ \end{block}
+  \begin{block}{ Conclusion }
+We can easily derive the following properties:
+ 
+
+
+$$  \log_{a}b = \frac{1}{ \log_{b}a}   $$
+$$  \log_{a}b \cdot  \log_{b}a =1   $$
+   
+ \end{block}
+\end{frame} 
+\begin{frame}{Examples}
+\begin{exampleblock}
+
+\begin{enumerate}
+    \item Evaluate:
+    $ \frac{4}{\log_{2}12} + \frac{2}{\log_{3}12}  $
+   \item Calculate $\log_{20}200 $ in terms of $p$ if $\log_{5}2 = p$
+   \item $\log_{a}b = c$ is given. Express each logarithm in terms of $c$:
+   \begin{enumerate}
+       \item [(a)] $\log_{a^{2}b}ab^{2} $
+       \item [(b)] $\log_{\frac{a^{3}}{b^{2}}}ab^{4}$
+   \end{enumerate}
+   \item Calculate each logarithm in terms of $a$, using the relation given:
+   \begin{enumerate}
+       \item [(a)] $\log 25 $; $a = \log 2$
+       \item [(b)] $\log_{3}18$; $a = \log_{3}12$
+       \item [(c)] $\log_{12}27$; $a = \log_{6}16$
+   \end{enumerate}
+   
+\end{enumerate}
+\item Simplify: $\sqrt{25^{\frac{1}{\log_{6}5}} + 49^{\frac{1}{\log_{8}7}} }$
+\item Show that $\log_{2}3 \cdot \log_{5}7 \cdot \log_{11}13= \log_{2}13 \cdot \log_{5}3 \cdot \log_{11}7$
+   \end{exampleblock}
+\end{frame}
+
+\begin{frame}{ } 
+    \begin{block}{  Property 8   }
+ 
+$b^{ \log_{a}c}  = c^{ \log_{a}b}  $ \\ for $a,b,c >0$ and $a\ne 1.$
+
+   
+ \end{block}
+ \begin{exampleblock}{$\star$}
+ Calculate:
+ $$2^{ \log_{3}5} - 5^{ \log_{3}2}  $$
+ \end{exampleblock} 
+\end{frame}
+
+\end{document}
+
+
